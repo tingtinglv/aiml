@@ -1,0 +1,36 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO FORMAT</pattern>
+		<template>
+			format : HELLO
+		</template>
+	</category>
+	<category>
+		<pattern>UPPERCASE *</pattern>
+		<template>
+			format :<uppercase><star/></uppercase>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>LOWERCASE *</pattern>
+		<template>
+			format :<lowercase><star/></lowercase>
+		</template>
+	</category>
+
+	<category>
+		<pattern>FORMAL *</pattern>
+		<template>
+			format :<formal><star/></formal>
+		</template>
+	</category>
+
+	<category>
+		<pattern>SENTENCE *</pattern>
+		<template>
+			format :<sentence><star/></sentence>
+		</template>
+	</category>
+	
+</aiml>

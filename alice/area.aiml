@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+   <category>
+         <pattern> *  怎 么 样 </pattern>
+         <template>
+            <think><set name = "place"><star/></set></think>
+        </template>
+   </category>
+
+    <category>
+         <pattern> 请 介 绍 一 下 *  </pattern>
+         <template>
+            <srai><star/> 怎 么 样 </srai>
+        </template>
+   </category>
+
+       <category>
+         <pattern> * 简 介 </pattern>
+         <template>
+            <srai><star/> 怎 么 样 </srai>
+        </template>
+   </category>
+
+       <category>
+         <pattern> * 介 绍  </pattern>
+         <template>
+            <srai><star/> 怎 么 样 </srai>
+        </template>
+   </category>
+
+    <category>
+         <pattern> 你 来 自 哪 里 </pattern>
+         <template>
+            <srai>问我祖先来何处，山西洪洞大槐树。</srai>
+        </template>
+   </category>
+
+          <category>
+         <pattern> 你 从 哪 里 来 </pattern>
+         <template>
+            <srai> 你 来 自 哪 里 </srai>
+        </template>
+   </category>
+
+    <category>
+         <pattern> 你 家 是 哪 </pattern>
+         <template>
+            <srai> 你 来 自 哪 里 </srai>
+        </template>
+   </category>
+
+
+    <category>
+         <pattern>你 去 过 * 吗 </pattern>
+         <template>
+            <random>
+                <li>一起去呀！</li>
+                <li>没有呢……去过再去就不好玩了耶……</li>
+            </random>
+        </template>
+   </category>
+
+       <category>
+         <pattern> * 去 过 吗 </pattern>
+         <template>
+            <srai> 你 去 过 <star/>吗</srai>
+        </template>
+   </category>
+
+          <category>
+         <pattern> * 到 过 吗 </pattern>
+         <template>
+            <srai> 你 去 过 <star/> 吗</srai>
+        </template>
+   </category>
+
+</aiml>

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0.1">
+
+	 <category>
+                <pattern>WHAT IS YOUR NAME</pattern>
+		<template>
+	                Bob
+		</template>
+        </category>
+
+
+ 	<category>
+                <pattern>HELLO</pattern>
+                <template>hi</template>
+        </category>
+	 <category>
+                <pattern>HI</pattern>
+		<template>
+	                <srai>hello</srai>
+		</template>
+        </category>
+
+	<category>
+		<pattern>SAY SOMETHING</pattern>
+		<that>HI</that>
+		<template>Leave me alone!</template>
+	</category>
+	<category>
+		<pattern>WHAT GOING ON</pattern>
+		<that>LEAVE ME ALONE</that>
+		<template>I don't want to talk to you</template>
+	</category>
+	<category>
+		<pattern>OK</pattern>
+		<that>I DO NOT WANT TO TALK TO YOU</that>
+		<template>Don't waste my time</template>
+	</category>
+
+        <category>
+                <pattern>*</pattern>
+                <that>* WASTE *</that>
+                <template><thatstar index="2"/> is precious,how could you say'<star/>'</template>
+        </category>
+
+	<category>
+		<pattern>LET TALK ABOUT *</pattern>
+		<template>
+			set topic : <set name="topic"><star/></set>
+		</template>
+	</category>
+
+<!--quotation marks-->
+	<category>
+		<pattern>LET IS *</pattern>
+		<template>
+			IS
+		</template>
+	</category>
+
+	<category>
+		<pattern>LET US *</pattern>
+		<template>
+			US
+		</template>
+	</category>
+
+	<category>
+		<pattern>LET'S *</pattern>
+		<template>
+			'S
+		</template>
+	</category>
+
+
+<!-- that -->
+	<topic name="THAT">
+		<category>
+			<pattern>SAY *</pattern>
+			<template>say what?</template>
+		</category>
+
+		<category>
+			<pattern>I DON'T KNOW</pattern>
+			<template>Do you know "Alice"?</template>
+		</category>
+
+		<category>
+			<pattern>NO</pattern>
+			<that>DO YOU KNOW "ALICE"</that>
+			<template>me too </template>
+		</category>
+	</topic>
+	<!-- WRONG -->
+	<topic name= "TH'AT">
+		<category>
+			<pattern>SAY *</pattern>
+			<template>'what?</template>
+		</category>
+
+		<category>
+			<pattern>I DON'T KNOW</pattern>
+			<template>Do you know "Alice"?</template>
+		</category>
+
+		<category>
+			<pattern>NO</pattern>
+			<that>DO YOU KNOW "ALICE"</that>
+			<template>me too </template>
+		</category>
+	</topic>
+	
+	<!--RIGHT-->
+	<topic name= "TH AT">
+		<category>
+			<pattern>SAY *</pattern>
+			<template>spacebar what?</template>
+		</category>
+
+		<category>
+			<pattern>I DON'T KNOW</pattern>
+			<template>Do you know "Alice"?</template>
+		</category>
+
+		<category>
+			<pattern>NO</pattern>
+			<that>DO YOU KNOW "ALICE"</that>
+			<template>me too </template>
+		</category>
+	</topic>
+
+<!--
+	<category>
+		<pattern>HELLO</pattern>
+		<template>
+			<random>
+				<li>Hi,I'm Bob.May I help you?</li>
+				<li>Hi</li>
+				<li>Hello</li>
+			</random>
+		</template>
+	</category>
+	
+        <category>
+                <pattern>HI</pattern>
+                <template><srai>HELLO</srai></template>
+        </category>
+
+        <category>
+		<pattern>SAY SOMETHING</pattern>
+		<template>Let talk about AI</template>
+	</category>       
+
+        <category>
+                <pattern>* IS * OR *</pattern>
+                <template><star/> is <star index="3"/> <think><set name="user"><star index="2"/></set></think></template>
+        </category>a
+
+        <category>
+                <pattern>WHO IS USER</pattern>
+                <template><get name="user"/></template>
+        </category>
+
+        <category>
+                <pattern>WHO IS USER</pattern>
+		<template>
+			<codition name= "user" value="wy"> WZ</condition>
+		</template>
+        </category>
+		<pattern>OK</pattern>
+		<that index="1">Let talk about AI</that>
+		<template>Do you know Alice?</template>
+	</category>
+
+        <category>
+                <pattern>OK</pattern>
+                <that index="1">SAY SOMETHING</that>
+                <template>Do you know Bob?</template>
+        </category>
+
+	<category>
+                <pattern>TELL ME ABOUT *</pattern>
+                <template>Let talk about <set name="topic"><star/></set>?</template>
+        </category>
+
+        <category>
+                <pattern>PLEASE GO ON</pattern>
+                <template>What kinds of information about <get name="topic"/> you what to know?</template>
+        </category>
+	<topic name="AI">
+	        <category>
+                	<pattern>KNOWLDGE</pattern>
+                	<template>Eh?</template>
+        	</category>
+	</topic>
+	
+        <category>
+                <pattern>TIME</pattern>
+                <template><date/></template>
+        </category>
+
+        <category>
+                <pattern>VERSION</pattern>
+                <template><version/></template>
+        </category>
+
+        <category>
+                <pattern>ID</pattern>
+                <template><id/></template>
+        </category>
+	
+        <category>
+                <pattern>SIZE</pattern>
+                <template><size/></template>
+        </category>
+
+	<category>
+                <pattern>FORMAT TIME</pattern>
+                <template>I can't</template>
+        </category>
+-->
+        <!--	
+        <category>
+		<pattern>*</pattern>
+		<template>Sorry I don't know how to reply you <input index="1"/></template>
+	</category>
+	-->
+</aiml>

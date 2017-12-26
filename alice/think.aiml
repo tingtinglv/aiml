@@ -1,0 +1,29 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO THINK</pattern>
+		<template>
+			think: Hello
+		</template>
+	</category>
+	
+	<category>
+		<pattern>THINK FIRST *</pattern>
+		<template>
+			think: <set name="think"><think><star/></think></set>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>THINK LATER *</pattern>
+		<template>
+			think: <think><set name="think"><star/></set></think>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>THINK</pattern>
+		<template>
+			think: <get name="think"/>
+		</template>
+	</category>
+</aiml>

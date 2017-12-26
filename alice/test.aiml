@@ -1,0 +1,11 @@
+<aiml version="1.0">
+   <category>
+        <pattern>你 要 去 哪</pattern>
+        <template>
+            <condition>
+                <li>我要去北京</li>
+            </condition>
+            <end></end>
+        </template>
+    </category>
+</aiml>

@@ -1,0 +1,20 @@
+<aiml version="1.0">
+	<category>
+		<pattern>TULING *</pattern>
+		<template>
+			<API type="http" name="tuling" key="8190486186fc431f8a5edaad91fd02a5"><star/></API>
+		</template>
+	</category>
+	<category>
+		<pattern>ARS *</pattern>
+		<template>
+			<API type="http" name="ars" amount="2"><star/></API>
+		</template>
+	</category>
+		<category>
+		<pattern> *</pattern>
+		<template>
+			<API type="http" name = "ourchat"><star/></API>
+		</template>
+	</category>
+</aiml>

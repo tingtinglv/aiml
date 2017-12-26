@@ -1,0 +1,55 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO THAT</pattern>
+		<template>that: Hi</template>
+	</category>
+	
+	<category>
+		<pattern>THAT 1 *</pattern>
+		<template>
+			that : <that index="1"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>THAT 1 *</pattern>
+		<template>
+			that 1: <that index="1"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>THAT 2 *</pattern>
+		<template>
+			that 2: <that index="2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>THAT 1 1 *</pattern>
+		<template>
+			that 1,1: <that index="1,1"/>
+		</template>
+	</category>
+		
+	<category>
+		<pattern>THAT 2 1 *</pattern>
+		<template>
+			that 2,1: <that index="2,1"/>
+		</template>
+	</category>
+		
+	<category>
+		<pattern>THAT 1 2 *</pattern>
+		<template>
+			that 1,2: <that index="1,2"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>THAT 2 2 *</pattern>
+		<template>
+			that 2,2: <that index="2,2"/>
+		</template>
+	</category>
+</aiml>

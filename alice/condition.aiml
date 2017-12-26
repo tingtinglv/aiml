@@ -1,0 +1,72 @@
+﻿<aiml version="1.0">
+
+<!-- SET VALUE-->
+	<category>
+		<pattern>SET AB *</pattern>
+		<template>
+			<srai>SET AB1 <star/></srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>SET AB1 *</pattern>
+		<template>
+			condition:SET ab <set name="ab"><star/></set>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>SET AB2 *</pattern>
+		<template>
+			condition:SET AB <set name="AB"><star/></set>
+		</template>
+	</category>
+	<category>
+		<pattern>SET AB3 *</pattern>
+		<template>
+			condition:SET Ab <set name="Ab"><star/></set>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>SET AB4 *</pattern>
+		<template>
+			condition:SET aB <set name="aB"><star/></set>
+		</template>
+	</category>
+	<category>
+		<pattern>CONDITION</pattern>
+		<template>
+			<condition>
+				<li name="ab" value="ALICE">condition:ab ALICE</li>
+				<li name="AB" value="ALICE">condition:AB ALICE</li>
+				<li name="Ab" value="ALICE">condition:Ab ALICE</li>
+				<li name="aB" value="ALICE">condition:aB ALICE</li>
+				
+				<li>condition:No match</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>CONDITION NAME</pattern>
+		<template>
+			<condition name="ab">
+				<li value="Alice">condition:Alice</li>
+				<li value="ALICE">condition:ALICE</li>
+				<li value="BOB">condition:BOB</li>
+				<li value="Bob">condition:Bob</li>
+				<li>No match</li>
+			</condition>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>CONDITION NAME VALUE</pattern>
+		<template>
+			<condition name="A" value="ALICE">condition:Alice</condition>
+			<condition name="A" value="BOB">condition:Bob</condition>
+			<condition name="A" value="">No value</condition>
+		</template>
+	</category>
+</aiml>

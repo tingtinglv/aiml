@@ -1,0 +1,72 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO STAR</pattern>
+		<template>star: Hi</template>
+	</category>
+
+<!-- campare  ( _ or _ ) with ( * or * or * ) -->
+	<category>
+		<pattern>STAR _ OR _</pattern>
+		<template>
+			star _ : 1. <star/>    2. <star index="2"/>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>STAR * OR * OR *</pattern>
+		<template>
+			star * : 1. <star/>    2. <star index="2"/>   3. <star index="3"/>
+		</template>
+	</category>
+
+<!-- campare  ( _ and _ ) with ( _ and _ and _ ) -->
+
+	<category>
+		<pattern>STAR _ AND _</pattern>
+		<template>
+			star _ : 1. <star/>    2. <star index="2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>STAR _ AND _ AND _</pattern>
+		<template>
+			star _ : 1. <star/>    2. <star index="2"/>   3. <star index="3"/>
+		</template>
+	</category>
+
+
+<!-- ex -->
+
+<!-- campare  ( * no _ ) with ( _ no * ) -->
+
+	<category>
+		<pattern>STAR _ NO *</pattern>
+		<template>
+			star _ * : 1. <star/>    2. <star index="2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>STAR * NO _</pattern>
+		<template>
+			star * _ : 1. <star/>    2. <star index="2"/>
+		</template>
+	</category>
+
+<!-- campare  ( _ no * ) with ( * no _ no _ ) -->
+
+	<category>
+		<pattern>STAR _ NO *</pattern>
+		<template>
+			star _ * : 1. <star/>    2. <star index="2"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>STAR * NO _ NO _</pattern>
+		<template>
+			star * _ _ : 1. <star/>    2. <star index="2"/>    3. <star index="3"/>
+		</template>
+	</category>
+</aiml>

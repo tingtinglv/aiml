@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+	<category>
+   		<pattern> 宾 馆 </pattern>
+   		<template>
+			请您提供具体的地址，时间等相关信息，才能给您提供您想要知道的哦~
+			<think><set name = "topic">订 宾 馆</set></think>
+   		</template>
+	</category>
+
+	<topic name = "订 宾 馆">
+
+	<category>
+		<pattern> * 附 近 的 宾 馆 </pattern>
+		<template>
+			机器人：雷达扫描开启！#API
+			<think><set name = "place"><star/></set></think>
+		</template>
+	</category>
+
+	<category>
+		<pattern> 距 离 * 的 宾 馆 </pattern>
+		<template>
+			机器人：雷达扫描开启！#API
+			<think><set name = "distance"><star/></set></think>
+		</template>
+	</category>
+
+	<category>
+		<pattern> * 附 近 可 定 的 * 星 宾 馆 </pattern>
+		<template>
+			机器人：雷达扫描开启！#API
+			<think><set name = "place"><star index = "1"/></set></think>
+			<think><set name = "level"><star index = "2"/></set></think>
+		</template>
+	</category>
+
+	<category>
+		<pattern> 平 均 价 格 在 * 的 / * 星 的 </pattern>
+		<template>
+			有钱银哦 #API
+			<think><set name = "price"><star index = "2"/></set></think>
+		</template>
+	</category>
+
+	<category>
+		<pattern> * 星 的 </pattern>
+		<template>
+			有钱银哦 #API
+			<think><set name = "level"><star/></set></think>
+		</template>
+
+
+
+	</category>
+
+	<category>
+		<pattern> 谢 谢 </pattern>
+		<template>
+			甭客气，为您服务是我该做的！
+		</template>
+	</category>
+
+	</topic>
+</aiml>

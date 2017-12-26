@@ -1,0 +1,20 @@
+<aiml version="1.0">
+   <category>
+        <pattern>TIME *</pattern>
+        <that>什 么 时 间 呀 </that>
+        <template>
+            <think>
+                <set name="time"><star/></set>
+            </think>
+            <condition>
+                <li name = "from" value = "None">从哪出发呀？</li>
+                <li name = "to" value = "None">你要去哪呀？</li>
+                <li name = "time" value = "None">什么时间呀？</li>
+                <li>好的，您的订单详情为：从<get name = "from"/> 到 <get name = "to"/>的<get name = "way"/>票，时间是<get name = "time"/></li>
+            </condition>
+            <end></end>
+        </template>
+    </category>
+</aiml>
+
+

@@ -1,0 +1,21 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO INPUT</pattern>
+		<template>input: Hi</template>
+	</category>
+	<category>
+		<pattern>INPUT *</pattern>
+		<template>
+			input last: <input/>
+		</template>
+	</category>
+	<category>
+		<pattern>INPUTS *</pattern>
+		<template>
+			input index=4: <input index="4"/><br/>\n
+			input index=3: <input index="3"/><br/>\n
+			input index=2: <input index="2"/><br/>\n
+			input index=1: <input index="1"/><br/>\n
+		</template>
+	</category>
+</aiml>

@@ -1,0 +1,24 @@
+<aiml version="1.0">
+
+    <category>
+		<pattern>LEARN * 123 * ABC</pattern>
+		<template>
+		    learn <star index="1"/>.aiml
+		    学习 <star index="2"/> 
+		    <learn><star/>.aiml</learn>
+		</template>
+	</category>
+
+	<category>
+		<pattern>学 习 *</pattern>
+		<template>
+		    <star/>
+		</template>
+	</category>
+    <category>
+		<pattern>STUDY 123</pattern>
+		<template>
+		    123
+		</template>
+	</category>
+</aiml>

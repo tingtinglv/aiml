@@ -1,0 +1,21 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO GOSSIP</pattern>
+		<template>gossip : hello</template>
+	</category>
+
+<!-- DON'T WORK-->
+	<category>
+		<pattern>GOSSIP *</pattern>
+		<template>
+			gossip : <gossip><star/></gossip>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>GOSSIP2 *</pattern>
+		<template>
+			gossip2 : <gossip src="gossip.txt"><star/></gossip>
+		</template>
+	</category>
+</aiml>

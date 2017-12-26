@@ -1,0 +1,53 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO IF</pattern>
+		<template>if: hello</template>
+	</category>
+	
+	<category>
+		<pattern>SET IFV *</pattern>
+		<template>
+			if: <set name="ifv"><star/></set>
+		</template>
+	</category>
+
+	<category>
+		<pattern>GET IFV</pattern>
+		<template>
+			if: <get name="ifv"/>
+		</template>
+	</category>
+
+	<category>
+		<pattern>IF EXIST</pattern>
+		<template>
+			<if name="ifv" exists="true">
+				if : topic is <get name="topic"/>
+			<else/>
+				if : topic is none
+			</if>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>IF VALUE</pattern>
+		<template>
+			<if name="ifv" value="alice">
+				if : topic is <get name="topic"/>
+			<else/>
+				if : topic is not alice
+			</if>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>IF CONTRAIN</pattern>
+		<template>
+			<if name="ifv" contrain="al">
+				if : topic has al
+			<else/>
+				if : topic doesn't have al
+			</if>
+		</template>
+	</category>
+</aiml>

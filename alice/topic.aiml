@@ -1,0 +1,117 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>SET TOPIC *</pattern>
+		<template>
+			<srai>SET TOPIC1 <star/></srai>		
+		</template>
+	</category>
+	
+	<category>
+		<pattern>SET TOPIC1 *</pattern>
+		<template>
+			topic : <set name="topic"><star/></set>			
+		</template>
+	</category>
+	
+	<category>
+		<pattern>SET TOPIC2 *</pattern>
+		<template>
+			TOPIC : <set name="TOPIC"><star/></set>	
+		</template>
+	</category>
+	
+	<topic name="ALICE">
+		<category>
+			<pattern>SAY HELLO</pattern>
+			<template>
+				topic : <get name="topic"/> : hello
+			</template>
+		</category>
+	</topic>
+	<topic name="B OB">
+		<category>
+			<pattern>SAY HELLO</pattern>
+			<template>
+				topic : <get name="topic"/> : hello
+			</template>
+		</category>
+	</topic>
+
+	<topic name="BOB">
+		<category>
+			<pattern>SAY HELLO</pattern>
+			<template>
+				topic : <get name="TOPIC"/> : hello
+			</template>
+		</category>
+	</topic>
+	<topic name="BOB">
+		<category>
+			<pattern>SAY HI</pattern>
+			<template>
+				topic : <get name="topic"/> : HI
+			</template>
+		</category>
+	</topic>
+
+<topic name="FDSAFSA">
+<category>
+<pattern>FDSAFAS</pattern>
+
+<that index="1">fdas</that>
+
+<template>
+sdafds<think></think>
+<uppercase></uppercase>
+<lowercase></lowercase>
+<formal></formal>
+<date/><version/><size/><id/><input index = "1"/><star index = "1"/><set name="fds">f<get name="fdsa"/></set>
+<random>
+<li>111</li>
+<li>222</li>
+<li>333</li>
+</random>
+
+</template>
+</category>
+</topic>
+
+<topic name="FDSAFSA">
+<category>
+<pattern>FDSAFAS</pattern>
+
+<that index="1">fdas</that>
+
+<template>
+<condition name="fdas">
+<li value="fdsa">fdsaf</li>
+</condition>
+<condition>
+<li name ="fdsa" value="fa">fasdcs</li>
+</condition>
+
+<condition name="fdsa" value="fdasf"></condition>
+</template>
+</category>
+</topic>
+
+
+
+<!-- topic star -->
+
+	<category>
+		<pattern>SET STAR TOPIC * AND *</pattern>
+		<template>
+			topic-star : <set name="topic"><star/> and <star index="2"/></set>	
+		</template>
+	</category>
+	<topic name="* AND *">
+		<category>
+			<pattern>SAY HELLO</pattern>
+			<template>
+				topic : <get name="topic"/> : hello star1 = <topicstar index="1"/> 
+				And star2 = <topicstar index="2"/> 
+			</template>
+		</category>
+	</topic>
+</aiml>

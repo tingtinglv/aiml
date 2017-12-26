@@ -1,0 +1,51 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>HELLO</pattern>
+		<template>srai: Hi</template>
+	</category>
+	<category>
+		<pattern>HI</pattern>
+		<template>
+			<srai>HELLO</srai>
+			Hello~
+		</template>
+	</category>
+
+	<category>
+		<pattern>AHA</pattern>
+		<template>
+			srai : <srai>HELLO</srai>
+		</template>
+	</category>
+<!-- ex -->
+	<category>
+		<pattern>SRAI1</pattern>
+		<template>
+			_srai1
+		</template>
+	</category>
+	<category>
+		<pattern>SRAI2</pattern>
+		<template>
+			_srai2 :<srai>srai1</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>SRAI3</pattern>
+		<template>
+			_srai3 :<srai>srai2</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>SRAI4</pattern>
+		<template>
+			_srai4 :<srai>srai3</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>SRAI5</pattern>
+		<template>
+			_srai5 :<srai>srai4</srai>
+		</template>
+	</category>
+</aiml>

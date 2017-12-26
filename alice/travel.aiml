@@ -1,0 +1,271 @@
+<aiml version="1.0">
+<category>
+        <pattern>订 车 票</pattern>
+        <template>
+            很高兴为您服务，您选择的交通工具为？
+            <think>
+                <set name="topic">ticket</set>
+                <set name = "from">None</set>
+                <set name = "to">None</set>
+                <set name = "time">None</set>
+                <set name = "way">None</set>
+            </think>
+        </template>
+</category>
+<category>
+    <pattern>订 车 票 *</pattern>
+    <template>
+        <srai> 订 车 票</srai>
+    </template>
+</category>
+<category>
+    <pattern>* 订 车 票</pattern>
+    <template>
+        <srai> 订 车 票</srai>
+    </template>
+</category>
+<topic name = "TICKET">
+    <category>
+             <pattern>我 要 坐 汽 车</pattern>
+             <template>
+                  <condition>
+                     <li name = "from" value = "None">从哪出发呀？</li>
+                    <li name = "to" value = "None">你要去哪呀？</li>
+                    <li name = "time" value = "None">什么时间呀？</li>
+                    <li name = "way" value = "None">很高兴为您服务，您选择的交通工具为？</li>
+                    <li>好的，您的订单详情为：从<get name = "from"/> 到 <get name = "to"/>的<get name = "way"/>票，时间是<get name = "time"/><end></end></li>
+                 </condition>
+             </template>
+    </category>
+    <category>
+        <pattern>汽 车 *</pattern>
+            <template>
+            <think>
+                <set name = "way">汽车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+    <category>
+        <pattern>* 汽 车 *</pattern>
+            <template>
+            <think>
+                <set name = "way">汽车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+    <category>
+        <pattern>* 汽 车</pattern>
+            <template>
+            <think>
+                <set name = "way">汽车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+        <category>
+        <pattern>汽 车</pattern>
+
+            <template>
+            <think>
+                <set name = "way">汽车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+
+        <category>
+        <pattern>火 车 *</pattern>
+            <template>
+             <think>
+                <set name = "way">火车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+    <category>
+        <pattern>* 火 车 *</pattern>
+            <template>
+             <think>
+                <set name = "way">火车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+    <category>
+        <pattern>* 火 车</pattern>
+            <template>
+             <think>
+                <set name = "way">火车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+     <category>
+        <pattern> 火 车</pattern>
+            <template>
+             <think>
+                <set name = "way">火车</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+
+    <category>
+        <pattern>飞 机 *</pattern>
+            <template>
+             <think>
+                <set name = "way">飞机</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+
+        <category>
+        <pattern>* 飞 机 *</pattern>
+            <template>
+             <think>
+                <set name = "way">飞机</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+    <category>
+        <pattern>* 飞 机</pattern>
+            <template>
+             <think>
+                <set name = "way">飞机</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+    <category>
+        <pattern>飞 机</pattern>
+            <template>
+             <think>
+                <set name = "way">飞机</set>
+            </think>
+                <srai>我 要 坐 汽 车</srai>
+            </template>
+    </category>
+
+    <category>
+             <pattern>我 要 去 *</pattern>
+             <template>
+                 <think>
+                     <set name="to"><star/></set>
+                 </think>
+                 <condition>
+                    <li name = "from" value = "None">从哪出发呀？</li>
+                    <li name = "to" value = "None">你要去哪呀？</li>
+                    <li name = "time" value = "None">什么时间呀</li>
+                    <li name = "way" value = "None">很高兴为您服务，您选择的交通工具为？</li>
+                    <li>好的，您的订单详情为：从<get name = "from"/> 到 <get name = "to"/>的<get name = "way"/>票，时间是<get name = "time"/><end></end></li>
+                 </condition>
+             </template>
+    </category>
+    <category>
+        <pattern>从 *</pattern>
+        <template>
+            <think>
+                <set name = "from"><star/></set>
+            </think>
+            <condition>
+                <li name = "from" value = "None">从哪出发呀？</li>
+                <li name = "to" value = "None">你要去哪呀？</li>
+                <li name = "time" value = "None">什么时间呀？</li>
+                <li name = "way" value = "None">很高兴为您服务，您选择的交通工具为？</li>
+                <li>好的，您的订单详情为：从<get name = "from"/> 到 <get name = "to"/>的<get name = "way"/>票，时间是<get name = "time"/><end></end></li>
+            </condition>
+        </template>
+    </category>
+     <category>
+        <pattern>TIME *</pattern>
+        <template>
+            <think>
+                <set name="time"><star/></set>
+            </think>
+            <condition>
+                <li name = "from" value = "None">从哪出发呀？</li>
+                <li name = "to" value = "None">你要去哪呀？</li>
+                <li name = "time" value = "None">什么时间呀？</li>
+                <li name = "way" value = "None">很高兴为您服务，您选择的交通工具为？</li>
+                <li>好的，您的订单详情为：从<get name = "from"/> 到 <get name = "to"/>的<get name = "way"/>票，时间是<get name = "time"/><end></end></li>
+            </condition>
+        </template>
+    </category>
+
+	<category>
+		<pattern>*</pattern>
+		<template>
+			<API type="http" name = "ourchat"><star/></API>
+		</template>
+	</category>
+
+	<category>
+        <pattern>交 通 工 具</pattern>
+        <template>
+            <condition>
+                <li name = "way" value = "None">很高兴为您服务，您选择的交通工具为？</li>
+                <li>好的，您的交通工具为<get name = "way"/></li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 交 通 工 具 *</pattern>
+        <template>
+            <srai>交 通 工 具 </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 出 行 工 具 *</pattern>
+        <template>
+            <srai>交 通 工 具 </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>出 行 时 间</pattern>
+        <template>
+            <condition>
+                <li name = "time" value = "None">什 么 时 间 呀</li>
+                <li>好的，您出行时间为<get name = "time"/></li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 时间 *</pattern>
+        <template>
+            <srai>出 行 时 间</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>目 的 地</pattern>
+        <template>
+            <condition>
+                <li name = "to" value = "None">你 要 去 哪</li>
+                <li>好的，您出行时间为<get name = "time"/></li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 时间 *</pattern>
+        <template>
+            <srai>出 行 时 间</srai>
+        </template>
+    </category>
+</topic>
+
+<category>
+    <pattern> *</pattern>
+    <template>
+        <API type="http" name = "ourchat"><star/></API>
+    </template>
+</category>
+</aiml>

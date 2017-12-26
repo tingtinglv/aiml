@@ -1,0 +1,43 @@
+﻿<aiml version="1.0">
+	<category>
+		<pattern>TIME</pattern>
+		<template>date : <date/></template>
+	</category>
+<!-- format -->
+<!-- Can't work -->
+	<category>
+		<pattern>YEAR</pattern>
+		<template>date : <date format="%Y"/></template>
+	</category>
+
+	<category>
+		<pattern>YEAR2</pattern>
+		<template>date : <date format="yyyy-MM-dd"/></template>
+	</category>
+	
+	<category>
+		<pattern>TIME2</pattern>
+		<template>date : <date format="HH:mm:ss"/></template>
+	</category>
+
+	<category>
+		<pattern>MONTH</pattern>
+		<template>date : <date format="%B"/></template>
+	</category>
+	
+	<category>
+		<pattern>DAY</pattern>
+		<template>date : <date format="%A"/></template>
+	</category>
+	
+	<category>
+		<pattern>DATE</pattern>
+		<template>date : <date format="%x"/></template>
+	</category>
+	
+	<category>
+		<pattern>HOUR</pattern>
+		<template>date : <date format="%I %p"/></template>
+	</category>
+	
+</aiml>

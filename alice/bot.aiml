@@ -1,0 +1,28 @@
+﻿<aiml version="1.0">
+
+
+	<category>
+		<pattern> 你 好 嘛 </pattern>
+		<template>
+			bot: hello 3
+		</template>
+	</category>
+	<category>
+		<pattern>API</pattern>
+		<template>
+			<API type="http" name="tuling" key="8190486186fc431f8a5edaad91fd02a5">hello world</API>
+		</template>
+	</category>
+	<category>
+		<pattern> 你 好 嘛 </pattern>
+		<template>
+			bot: hello 2
+		</template>
+	</category>
+	<category>
+		<pattern> 你 好 嘛 </pattern>
+		<template xml:space="preserve">
+			bot: hello        1
+		</template>
+	</category>
+</aiml>
